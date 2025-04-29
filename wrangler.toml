@@ -1,4 +1,4 @@
-name = "nextjs-cloudflare-template"
+name = "nextjs-cloudflare-demo"
 compatibility_date = "2023-12-01"
 compatibility_flags = ["nodejs_compat"]
 
