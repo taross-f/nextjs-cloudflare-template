@@ -1,0 +1,16 @@
+name = "nextjs-cloudflare-demo"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+compatibility_version = "1.0.0"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = ".next"
+
+[env.production]
+compatibility_flags = ["nodejs_compat"]
+
+[env.preview]
+compatibility_flags = ["nodejs_compat"]
