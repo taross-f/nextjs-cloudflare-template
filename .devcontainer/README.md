@@ -19,5 +19,8 @@
 ## 含まれる機能
 
 - Node.js 20
-- 必要なVS Code拡張機能（ESLint、Prettier、Tailwind CSS、TypeScript等）
+- Bun パッケージマネージャー
+- Biome（リンターとフォーマッター）
+- GitHub CLI (gh)
+- 必要なVS Code拡張機能（ESLint、Biome、Tailwind CSS、TypeScript等）
 - Cloudflare Wrangler CLI
