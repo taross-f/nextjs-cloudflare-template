@@ -37,6 +37,6 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "bun install",
   "remoteUser": "node"
 }
