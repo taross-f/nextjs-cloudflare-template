@@ -1,13 +1,9 @@
 name = "nextjs-cloudflare-demo"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
-compatibility_version = "1.0.0"
 
-[build]
-command = "npm run build"
-
-[site]
-bucket = ".next"
+# Cloudflare Pages build output directory
+pages_build_output_dir = ".vercel/output/static"
 
 [env.production]
 compatibility_flags = ["nodejs_compat"]
