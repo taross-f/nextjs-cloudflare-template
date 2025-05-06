@@ -16,9 +16,6 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
     && apt-get install -y gh \
     && rm -rf /var/lib/apt/lists/*
 
-# bunのインストール
-RUN curl -fsSL https://bun.sh/install | bash
-
 # 作業ディレクトリの設定
 WORKDIR /workspace
 
@@ -38,6 +35,10 @@ RUN npm config set fund false
 # Cloudflare Wranglerのインストール（Cloudflare開発のため）
 RUN npm install -g wrangler
 
-# bunへのパスを設定
-ENV PATH="/root/.bun/bin:$PATH"
-ENV PATH="/home/node/.bun/bin:$PATH"
+# nodeユーザーとしてbunをインストール
+USER node
+RUN curl -fsSL https://bun.sh/install | bash
+RUN echo 'export PATH="$HOME/.bun/bin:$PATH"' >> ~/.bashrc
+
+# rootユーザーに戻す（devcontainerのpostCreateCommandのため）
+USER root
